@@ -91,7 +91,7 @@ const loadNews = async () => {
   newsList.insertAdjacentElement('afterbegin', preLoader);
 
   //Поиск по стране(по умолчанию ru)
-  const country = localStorage.getItem('country') || 'ru';
+  const country = localStorage.getItem('country') || 'us';
   choices.setChoiceByValue(country);
   const data = await getData(
     `https://newsapi.org/v2/top-headlines?country=${country}`,
